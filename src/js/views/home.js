@@ -10,9 +10,9 @@ export const Home = () => {
     full_name: "", email: "", phone: "", address: "", agenda_slug: "David"
   })
   const Agregar = (event) => {
-    event.preventDefault()
-    actions.createContact()
-  }
+    event.preventDefault();
+    actions.createContact(data); // Pasa el objeto data a createContact
+  };
 
   const info = (event) => {
     setData({
@@ -21,17 +21,11 @@ export const Home = () => {
   }
   return (
     <div className="text-center mt-5">
-      {/* <h1>Contact List!</h1> */}
-      {/* <p>
-      <img src={rigoImage} alt="Rigo Baby" />
-    </p> */}
-      {/* <a href="#" className="btn btn-success">
-      If you see this green button, bootstrap is working
-    </a> */}
+
       <ul className="list-group">
         <li className="list-group-item">
           <h1 className="title">Add a new contact</h1>
-          {/* <form> */}
+
           <div>
             <label className="form-label">Full Name</label>
             <input type="text" className="form-control" placeholder="Full Name" onChange={info} name="full_name" required value={data.full_name} />
@@ -64,7 +58,7 @@ export const Home = () => {
           <Link to="/">
             <span>Or get back to contacts</span>
           </Link>
-          {/* </form> */}
+
         </li>
       </ul>
     </div>

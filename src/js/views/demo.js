@@ -16,7 +16,7 @@ export const Demo = () => {
 	return (
 		<div className="container">
 			<h3>Primero crea un contacto y luego Busca tu agenda por nombre:</h3>
-			<input type="text" onChange={(e) => actions.GetContact(e.target.value)} placeholder="David"></input>
+			<input type="text" onChange={(e) => actions.GetContact(e.target.value)} placeholder=" "></input>
 			<ul className="list-group">
 				{store.contacts.map((item, index) => (
 
@@ -42,7 +42,7 @@ export const Demo = () => {
 							
 							<div className=" justify-content-md-end col-md-3">
 
-								<button className="btn   " type="button" onClick={() => actions.deleteContact(item.id)}><i className="fa-solid fa-trash"></i></button>
+								<button className="btn   " type="button" onClick={() => actions.deleteContact(item.id)}><i className="fa-sorequilid fa-trash"></i></button>
 								<Link to={`/demoid/${item.id}`} className="btn me-md-2">
 									<button className="btn me-md-2" type="button" ><i className="fa-solid fa-pen-to-square"></i></button>
 								</Link>

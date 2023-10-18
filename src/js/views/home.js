@@ -7,7 +7,7 @@ import "../../styles/home.css";
 export const Home = () => {
   const { store, actions } = useContext(Context);
   const [data, setData] = useState({
-    full_name: "", email: "", phone: "", address: "", agenda_slug: "David"
+    full_name: "", email: "", phone: "", address: "", agenda_slug: " "
   })
   const Agregar = (event) => {
     event.preventDefault();

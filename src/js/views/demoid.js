@@ -7,7 +7,7 @@ export const Demoid = () => {
     const { id } = useParams();
 
     const [data, setData] = useState({
-        full_name: "", email: "", phone: "", address: "", agenda_slug: "David"
+        full_name: "", email: "", phone: "", address: "", agenda_slug: " "
     });
 
     useEffect(() => {
